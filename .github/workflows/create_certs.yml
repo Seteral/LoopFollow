@@ -45,6 +45,10 @@ jobs:
       - name: Install Project Dependencies
         run: bundle install
 
+      # Ensure App Group capabilities are enabled before provisioning profiles are generated
+      - name: Ensure App Group capabilities
+        run: bundle exec fastlane identifiers
+
       # Create or update Distribution certificate and provisioning profiles
       - name: Check and create or update Distribution certificate and profiles if needed
         run: |

@@ -140,6 +140,8 @@ This step is no longer required. The Build LoopFollow function now takes care of
 
 Once a year, you will get an email from Apple indicating your certificate will expire in 30 days. You can ignore that email. When it does expire, the next time an automatic or manual build happens, the expired certificate information will be removed (nuked) from your Match-Secrets repository and a new one created. This should happen without you needing to take any action.
 
+If an App Store provisioning profile needs to be updated after changing an app's capabilities, run **3. Create Certificates** manually and select **Refresh app-specific App Store provisioning profiles**. This refreshes the profiles for this app without revoking the shared Apple Distribution certificate. Leave this option unchecked for normal builds.
+
 ## Build LoopFollow
 
 1. Click on the "Actions" tab of your LoopFollow repository.
